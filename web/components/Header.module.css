@@ -2,7 +2,7 @@
 
 .root {
   position: relative;
-  color: var(--color-black, #000);
+  color: #fff;
   display: flex;
   margin: 0 auto;
   max-width: var(--width-small);

@@ -26,7 +26,8 @@ export default {
         { type: 'hero' },
         { type: 'imageSection' },
         { type: 'mailchimp' },
-        { type: 'textSection' }
+        { type: 'textSection' },
+        { type: 'textWithImageSection' }
       ]
     },
     {

@@ -71,10 +71,12 @@ class Header extends Component {
     const {showNav} = this.state
 
     return (
-      <div className={styles.root} data-show-nav={showNav}>
-        <h1 className={styles.branding}>
+      <div className={`z-10 w-screen mx-auto ${styles.root}`} data-show-nav={showNav}>
+        <h1 className={`text-yellow-500  ${styles.branding}`}>
           <Link href={'/'}>
-            <a title={title}>{this.renderLogo(logo)}</a>
+            <a className="" title={title}>
+              {this.renderLogo(logo)}
+            </a>
           </Link>
         </h1>
         <nav className={styles.nav}>
