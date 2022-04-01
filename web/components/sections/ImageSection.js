@@ -17,6 +17,8 @@ function ImageSection(props) {
 
   return (
     <div className={styles.root}>
+      {/*comment here
+      
       <figure className={styles.content}>
         <img
           src={builder.image(image).auto('format').width(2000).url()}
@@ -34,6 +36,22 @@ function ImageSection(props) {
           </div>
         </figcaption>
       </figure>
+*/}
+      <section className=" container mx-auto flex flex-row">
+        <div className="w-1/2 ">
+          <img
+            src={builder.image(image).auto('format').width(2000).url()}
+            className={`${styles.image}`}
+            alt={heading}
+          />
+        </div>
+        <div className="w-1/2 p-12 flex-col  space-y-2">
+          <div className="text-sm uppercase text-cyan-800 font-bol">{label}</div>
+          <h2 className="text-4xl font-bold">{heading}</h2>
+          {text && <SimpleBlockContent blocks={text} />}
+          {cta && cta.route && <Cta {...cta} />}
+        </div>
+      </section>
     </div>
   )
 }
