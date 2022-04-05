@@ -16,7 +16,7 @@ function BoxesSection(props) {
         {boxes && (
           <div className="mt-8 flex space-x-6 ">
             {boxes.map((box) => (
-              <Box {...box} key={box._key} />
+              <Box {...box} key={box._key} {...cta} />
             ))}
           </div>
         )}
