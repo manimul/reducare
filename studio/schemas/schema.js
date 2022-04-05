@@ -11,6 +11,7 @@ import siteConfig from './documents/siteConfig'
 
 // Object types
 import cta from './objects/cta'
+import box from './objects/box'
 import embedHTML from './objects/embedHTML'
 import figure from './objects/figure'
 import internalLink from './objects/internalLink'
@@ -24,6 +25,8 @@ import imageSection from './objects/imageSection'
 import mailchimp from './objects/mailchimp'
 import textSection from './objects/textSection'
 import textWithImageSection from './objects/textWithImageSection'
+import boxesSection from './objects/boxesSection'
+import calloutSection from './objects/calloutSection'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -32,6 +35,7 @@ export default createSchema({
   // to the ones provided by any plugins that are installed
   types: schemaTypes.concat([
     cta,
+    box,
     embedHTML,
     figure,
     hero,
@@ -45,6 +49,8 @@ export default createSchema({
     simplePortableText,
     siteConfig,
     textSection,
-    textWithImageSection
+    boxesSection,
+    textWithImageSection,
+    calloutSection
   ])
 })

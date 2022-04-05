@@ -41,13 +41,16 @@ function cta(props) {
   if (link) {
     return (
       <a className={styles.button} href={link}>
-        this
         {title}
       </a>
     )
   }
 
-  return <a className={styles.button}>this {title}</a>
+  return (
+    <a className="underline" href={route.slug}>
+      {title}
+    </a>
+  )
 }
 
 cta.propTypes = {

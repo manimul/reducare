@@ -27,7 +27,9 @@ export default {
         { type: 'imageSection' },
         { type: 'mailchimp' },
         { type: 'textSection' },
-        { type: 'textWithImageSection' }
+        { type: 'textWithImageSection' },
+        { type: 'boxesSection' },
+        { type: 'calloutSection' }
       ]
     },
     {
