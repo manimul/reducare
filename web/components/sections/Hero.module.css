@@ -1,7 +1,7 @@
-@import "../../styles/custom-media.css";
+@import '../../styles/custom-media.css';
 
 .root {
-  composes: center from "../../styles/shared.module.css";
+  composes: center from '../../styles/shared.module.css';
   position: relative;
   background-color: var(--color-black, #000);
   color: var(--color-white, #fff);
@@ -13,17 +13,6 @@
   @media (--media-min-medium) {
     padding-bottom: 4rem;
   }
-}
-
-.root::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  background-image: linear-gradient(#2220, #222e);
-  width: 100%;
-  height: 50%;
-  z-index: 0;
 }
 
 .content {

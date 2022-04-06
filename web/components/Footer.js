@@ -12,8 +12,8 @@ function Footer(props) {
   return (
     <div className={`bg-slate-900 text-white  {styles.root} pt-0`}>
       <section className="[contact-section]  bg-[#093A61]   ">
-        <div className="max-w-5xl  mx-auto flex py-32 text-white md:space-x-16 ">
-          <div className="w-1/2 space-y-4">
+        <div className="max-w-5xl  mx-auto flex  flex-col p-12 md:flex-row md:py-32 text-white md:space-x-16 ">
+          <div className="md:w-1/2 space-y-4">
             {' '}
             <h2 className="text-sm uppercase text-[#81A3BA]">Contact Us</h2>
             <h3 className="text-4xl text-white font-bold">
@@ -95,10 +95,14 @@ function Footer(props) {
           </div>
         </div>
 
-        <div className="[contact form section] max-w-5xl mx-auto flex shadow-3xl rounded-md">
-          <img src={contactImage.src} alt="contact form image" className="w-1/2 h-auto "></img>
+        <div className="[contact form section] max-w-5xl mx-auto flex flex-col md:flex-row shadow-3xl rounded-md">
+          <img
+            src={contactImage.src}
+            alt="contact form image"
+            className="md:w-1/2  md:h-auto "
+          ></img>
 
-          <form className="bg-white w-1/2 h-auto  p-8 text-black">
+          <form className="bg-white md:w-1/2 h-auto  p-8 text-black">
             <h2 className="text-2xl font-bold ">Book your meeting now</h2>
             <p className="">
               We typically save our customers 20-50% of telephony and data costs. Let&lsquo;s have a

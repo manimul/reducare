@@ -47,7 +47,7 @@ function cta(props) {
   }
 
   return (
-    <a className="underline" href={route.slug}>
+    <a className="underline block" href={route.slug}>
       {title}
     </a>
   )
