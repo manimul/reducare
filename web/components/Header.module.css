@@ -76,7 +76,13 @@
     left: 0;
     top: 100%;
     width: 100%;
-    background-color: var(--color-black, #000);
+    text-align: center;
+    background: rgba(0, 81, 128, 1);
+    min-height: 100vh;
+    padding: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+
     color: var(--color-white, #fff);
 
     @nest .root[data-show-nav='true'] & {
@@ -95,6 +101,7 @@
     display: block;
     position: relative;
     padding: 1.5rem 0.5rem;
+    font-size: 1.2rem;
 
     @nest &[data-is-active='true'] {
       font-weight: bold;
@@ -105,7 +112,6 @@
       padding: 1rem 1.5rem;
       width: 100%;
       box-sizing: border-box;
-      text-align: right;
 
       @nest &[data-is-active='true']::before {
         content: '';

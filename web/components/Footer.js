@@ -10,14 +10,15 @@ import contactImage from '../images/contact-image.png'
 function Footer(props) {
   const {navItems, text, router} = props
   return (
-    <div className={` text-white  {styles.root} pt-0`}>
+    <div className={` text-white bg-slate-900 pb-12 {styles.root} pt-0`}>
       <section className={`{[contact-section]   ${styles.gradient}  }`}>
         <div className="max-w-5xl  mx-auto flex  flex-col pt-32 pb-12 px-12 md:flex-row md:py-32 text-white md:space-x-16 ">
           <div className="md:w-1/2 space-y-4">
             {' '}
             <h2 className="text-sm uppercase text-[#81A3BA]">Contact Us</h2>
             <h3 className="text-4xl text-white font-bold">
-              Save at least 10% on our work. No cure - No pay
+              Save at least 10% on our work.{' '}
+              <span className="text-yellow-500">No cure - No pay</span>
             </h3>
             <p className="">
               Of course, you get this in writing: It does not cost you a penny if we do not save you
