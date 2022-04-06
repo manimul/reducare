@@ -96,16 +96,16 @@ function Footer(props) {
         </div>
 
         <div className="[contact form section] max-w-5xl mx-auto flex shadow-3xl rounded-md">
-          <img src={contactImage.src} className="w-1/2 h-auto "></img>
+          <img src={contactImage.src} alt="contact form image" className="w-1/2 h-auto "></img>
 
           <form className="bg-white w-1/2 h-auto  p-8 text-black">
             <h2 className="text-2xl font-bold ">Book your meeting now</h2>
             <p className="">
-              We typically save our customers 20-50% of telephony and data costs. Let's have a
+              We typically save our customers 20-50% of telephony and data costs. Let&lsquo;s have a
               non-binding talk about how we can help you save
             </p>
             <fieldset className="flex flex-col">
-              <label for="fullname" className="font-light mt-8 ">
+              <label htmlFor="fullname" className="font-light mt-8 ">
                 Full name<span className="text-red-500 dark:text-gray-50">*</span>
               </label>
               <input
@@ -114,7 +114,7 @@ function Footer(props) {
                 className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light "
               />
 
-              <label for="email" className=" font-light mt-4 ">
+              <label htmlFor="email" className=" font-light mt-4 ">
                 E-mail<span className="text-red-500">*</span>
               </label>
               <input
@@ -123,8 +123,8 @@ function Footer(props) {
                 className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light "
               />
 
-              <label for="subject" className="font-light mt-4 ">
-                Subject<span class="text-red-500">*</span>
+              <label htmlFor="subject" className="font-light mt-4 ">
+                Subject<span className="text-red-500">*</span>
               </label>
               <input
                 type="text"
@@ -132,14 +132,14 @@ function Footer(props) {
                 className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light "
               />
 
-              <label for="message" className=" font-light mt-4 ">
-                Message<span class="text-red-500">*</span>
+              <label htmlFor="message" className=" font-light mt-4 ">
+                Message<span className="text-red-500">*</span>
               </label>
               <textarea
                 name="message"
                 className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500  "
               ></textarea>
-              <button class="mt-8   bg-none border-2 bg-yellow-500  border-yellow-500 text-white py-5 rounded-lg inline-block tracking-wide  font-semibold uppercase">
+              <button className="mt-8   bg-none border-2 bg-yellow-500  border-yellow-500 text-white py-5 rounded-lg inline-block tracking-wide  font-semibold uppercase">
                 Send message
               </button>
             </fieldset>
