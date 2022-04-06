@@ -14,7 +14,7 @@ function box(props) {
       <img src={builder.image(image).auto('format').width(2000).url()} className="" alt={heading} />
       <h1 className="font-bold text-xl">{heading}</h1>
       {body && <SimpleBlockContent className="mb-4" blocks={body} />}
-      {cta && cta.route && <Cta {...cta} />}
+      {cta && <Cta {...cta} />}
     </div>
   )
 }

@@ -29,7 +29,8 @@ export default {
         { type: 'textSection' },
         { type: 'textWithImageSection' },
         { type: 'boxesSection' },
-        { type: 'calloutSection' }
+        { type: 'calloutSection' },
+        { type: 'teamMemberSection' }
       ]
     },
     {

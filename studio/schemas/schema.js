@@ -27,6 +27,8 @@ import textSection from './objects/textSection'
 import textWithImageSection from './objects/textWithImageSection'
 import boxesSection from './objects/boxesSection'
 import calloutSection from './objects/calloutSection'
+import teamMember from './objects/teamMember'
+import teamMemberSection from './objects/teamMemberSection'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -51,6 +53,8 @@ export default createSchema({
     textSection,
     boxesSection,
     textWithImageSection,
-    calloutSection
+    calloutSection,
+    teamMember,
+    teamMemberSection
   ])
 })
