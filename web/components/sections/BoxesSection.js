@@ -8,7 +8,7 @@ function BoxesSection(props) {
   const {heading, label, text, cta, boxes} = props
 
   return (
-    <div className={`bg-gray-100 ${styles.root}`}>
+    <div className={` ${styles.gradient} ${styles.root}`}>
       <section className={'container px-4 py-12 md:max-w-5xl mx-auto'}>
         <div className="text-sm uppercase text-cyan-800 font-bol">{label}</div>
         <h2 className="text-2xl md:text-4xl font-bold">{heading}</h2>

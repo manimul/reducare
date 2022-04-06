@@ -8,8 +8,13 @@
 }
 
 .gradient {
-  background: radial-gradient(160.32% 486.03% at -41.58% 122.37%, #131d3b 4.66%, #005180 54.69%)
-    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  background: rgb(19, 29, 59);
+  background: linear-gradient(
+    56deg,
+    rgba(19, 29, 59, 1) 0%,
+    rgba(0, 81, 128, 1) 48%,
+    rgba(96, 170, 181, 1) 100%
+  );
 }
 
 .items {

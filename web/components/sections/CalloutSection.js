@@ -16,7 +16,7 @@ function CalloutSection(props) {
   }
 
   return (
-    <div className={`bg-gradient-to-r from-blue-900 via-sky-900 to-cyan-900 ${styles.root}`}>
+    <div className={` ${styles.gradient} ${styles.root}`}>
       <section className=" mx-auto max-w-4xl flex flex-col md:flex-row py-12 md:p-6 align-middle text-center md:text-left">
         <div className=" md:w-1/3 m-auto ">
           <img

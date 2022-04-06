@@ -70,3 +70,18 @@
     max-width: calc((var(--width-small) / 2) - 3rem);
   }
 }
+
+.gradient {
+  background: rgb(19, 29, 59);
+  background: linear-gradient(300deg, rgba(19, 29, 59, 1) 0%, rgba(15, 30, 75, 1) 100%);
+}
+
+.lightGradient {
+  background: rgb(250, 247, 237);
+  background: linear-gradient(
+    56deg,
+    rgba(250, 247, 237, 1) 0%,
+    rgba(245, 246, 241, 1) 48%,
+    rgba(245, 246, 241, 1) 100%
+  );
+}

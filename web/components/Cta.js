@@ -31,7 +31,7 @@ function cta(props) {
         }}
         as={`/${route.slug.current}`}
       >
-        <a className="bg-yellow-500 border-2 border-yellow-500  text-black px-8 py-5 rounded-lg inline-block tracking-wide  font-semibold">
+        <a className="bg-yellow-500 border-2 border-yellow-500  text-black px-8 py-5 rounded-lg inline-block tracking-wide  font-semibold ">
           {title}
         </a>
       </Link>
