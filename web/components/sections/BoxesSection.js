@@ -14,7 +14,7 @@ function BoxesSection(props) {
         <h2 className="text-2xl md:text-4xl font-bold">{heading}</h2>
         {text && <SimpleBlockContent blocks={text} />}
         {boxes && (
-          <div className="mt-8 flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-6 ">
+          <div className="mt-8 flex flex-col 	 md:flex-row space-y-6 md:space-y-0 md:space-x-6 ">
             {boxes.map((box) => (
               <Box {...box} key={box._key} {...cta} />
             ))}

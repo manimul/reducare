@@ -4,6 +4,13 @@
   composes: center from '../../styles/shared.module.css';
   position: relative;
   background-color: var(--color-black, #000);
+  background: radial-gradient(
+      160.32% 486.03% at -41.58% 122.37%,
+      #131d3b 4.66%,
+      #005180 54.69%,
+      #60aab5 100%
+    )
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
   color: var(--color-white, #fff);
   background-size: cover;
   background-repeat: no-repeat;
