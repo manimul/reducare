@@ -12,7 +12,7 @@ function Footer(props) {
   return (
     <div className={`bg-slate-900 text-white  {styles.root} pt-0`}>
       <section className="[contact-section]  bg-[#093A61]   ">
-        <div className="max-w-5xl  mx-auto flex  flex-col p-12 md:flex-row md:py-32 text-white md:space-x-16 ">
+        <div className="max-w-5xl  mx-auto flex  flex-col pt-32 pb-12 px-12 md:flex-row md:py-32 text-white md:space-x-16 ">
           <div className="md:w-1/2 space-y-4">
             {' '}
             <h2 className="text-sm uppercase text-[#81A3BA]">Contact Us</h2>
@@ -127,12 +127,12 @@ function Footer(props) {
                 className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light "
               />
 
-              <label htmlFor="subject" className="font-light mt-4 ">
-                Subject<span className="text-red-500">*</span>
+              <label htmlFor="company" className="font-light mt-4 ">
+                Company<span className="text-red-500">*</span>
               </label>
               <input
                 type="text"
-                name="subject"
+                name="company"
                 className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light "
               />
 

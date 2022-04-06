@@ -6,20 +6,25 @@ export default {
     {
       name: 'heading',
       type: 'string',
-      title: 'Heading',
+      title: 'Heading'
+    },
+    {
+      name: 'landingPage',
+      type: 'boolean',
+      title: 'Landing Page'
     },
     {
       name: 'tagline',
       type: 'simplePortableText',
-      title: 'Tagline',
+      title: 'Tagline'
     },
     {
       name: 'backgroundImage',
       type: 'image',
       title: 'Background image',
       options: {
-        hotspot: true,
-      },
+        hotspot: true
+      }
     },
     {
       name: 'ctas',
@@ -28,22 +33,22 @@ export default {
       of: [
         {
           title: 'Call to action',
-          type: 'cta',
-        },
-      ],
-    },
+          type: 'cta'
+        }
+      ]
+    }
   ],
   preview: {
     select: {
       title: 'heading',
-      media: 'backgroundImage',
+      media: 'backgroundImage'
     },
     prepare({ title, media }) {
       return {
         title,
         subtitle: 'Hero section',
-        media,
-      };
-    },
-  },
-};
+        media
+      }
+    }
+  }
+}
