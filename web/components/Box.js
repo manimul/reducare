@@ -9,6 +9,7 @@ function box(props) {
   const {image, heading, body, boxlinks} = props
   const builder = imageUrlBuilder(client)
   const simpleLink = true
+  simpleLink
 
   return (
     <div className="bg-white p-6 border border-gray-300 rounded grow basis-0 shadow-xl space-y-2">

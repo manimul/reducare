@@ -8,7 +8,6 @@ import Cta from './Cta'
 function teamMember(props) {
   const {name, title, text, image, cta} = props
   const builder = imageUrlBuilder(client)
-  const simpleLink = true
 
   return (
     <div className="max-w-4xl flex md:flex-row flex-col space-y-6 md:even:flex-row-reverse md:space-x-8 ">

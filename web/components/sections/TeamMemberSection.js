@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import SimpleBlockContent from '../SimpleBlockContent'
 import styles from './TextSection.module.css'
 import TeamMember from '../TeamMember'
-import Cta from '../Cta'
 
 function TeamMemberSection(props) {
   const {heading, label, text, teamMembers} = props
