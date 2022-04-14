@@ -26,9 +26,9 @@ export default {
     },
 
     {
-      name: 'linkedin',
+      name: 'cta',
       type: 'cta',
-      title: 'Linkedin'
+      title: 'CTA'
     }
   ],
   preview: {

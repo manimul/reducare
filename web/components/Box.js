@@ -6,15 +6,16 @@ import SimpleBlockContent from './SimpleBlockContent'
 import Cta from './Cta'
 
 function box(props) {
-  const {image, heading, body, cta} = props
+  const {image, heading, body, boxlinks} = props
   const builder = imageUrlBuilder(client)
+  const simpleLink = true
 
   return (
     <div className="bg-white p-6 border border-gray-300 rounded grow basis-0 shadow-xl space-y-2">
       <img src={builder.image(image).auto('format').width(2000).url()} className="" alt={heading} />
       <h1 className="font-bold text-xl">{heading}</h1>
       {body && <SimpleBlockContent className="mb-4" blocks={body} />}
-      {cta && <Cta {...cta} />}
+      {boxlinks && <Cta simpleLink {...boxlinks} />}
     </div>
   )
 }
@@ -26,8 +27,10 @@ box.propTypes = {
     }),
   }),
   heading: PropTypes.string,
+  style: PropTypes.string,
+
   body: PropTypes.arrayOf(PropTypes.object),
-  cta: PropTypes.object,
+  boxlinks: PropTypes.object,
 }
 
 export default box

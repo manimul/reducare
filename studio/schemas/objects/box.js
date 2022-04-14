@@ -14,9 +14,9 @@ export default {
       title: 'Heading'
     },
     {
-      name: 'cta',
+      name: 'boxlinks',
       type: 'cta',
-      title: 'Call to action'
+      title: 'Links'
     },
     {
       name: 'body',

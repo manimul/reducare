@@ -1,13 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import imageUrlBuilder from '@sanity/image-url'
-import client from './../client'
+import client from '../client'
 import SimpleBlockContent from './SimpleBlockContent'
 import Cta from './Cta'
 
 function teamMember(props) {
-  const {name, title, text, image, linkedin} = props
+  const {name, title, text, image, cta} = props
   const builder = imageUrlBuilder(client)
+  const simpleLink = true
 
   return (
     <div className="max-w-4xl flex md:flex-row flex-col space-y-6 md:even:flex-row-reverse md:space-x-8 ">
@@ -20,7 +21,7 @@ function teamMember(props) {
         <h2 className="font-bold text-xl">{name}</h2>
         <h3 className="font-bold text-xl">{title}</h3>
         {text && <SimpleBlockContent className="mb-4" blocks={text} />}
-        {linkedin && <Cta {...linkedin} />}
+        {cta && <Cta {...cta} />}
       </div>
     </div>
   )
@@ -32,10 +33,10 @@ teamMember.propTypes = {
       _ref: PropTypes.string,
     }),
   }),
+  cta: PropTypes.object,
   name: PropTypes.string,
   title: PropTypes.string,
   text: PropTypes.arrayOf(PropTypes.object),
-  linkedin: PropTypes.object,
 }
 
 export default teamMember

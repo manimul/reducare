@@ -14,6 +14,11 @@ export default {
       title: 'Label'
     },
     {
+      name: 'cta',
+      type: 'cta',
+      title: 'CTA'
+    },
+    {
       name: 'text',
       type: 'simplePortableText',
       title: 'Text'

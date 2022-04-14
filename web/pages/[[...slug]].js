@@ -13,14 +13,22 @@ const pageFragment = groq`
 ...,
 content[] {
   ...,
+  
   cta {
     ...,
     route->
   },
+  boxes[]{
+   ..., boxlinks{
+    ...,
+    route-> 
+  }
+ } ,
   ctas[] {
     ...,
     route->
   }
+
 }`
 
 /**
@@ -30,6 +38,7 @@ content[] {
  * for every page requested - /, /about, /contact, etc..
  * From the received params.slug, we're able to query Sanity for the route coresponding to the currently requested path.
  */
+
 export const getServerSideProps = async ({params}) => {
   const slug = slugParamToPath(params?.slug)
 
@@ -86,6 +95,8 @@ const LandingPage = (props) => {
     config = {},
     slug,
   } = props
+
+  console.log(content)
 
   const openGraphImages = openGraphImage
     ? [
