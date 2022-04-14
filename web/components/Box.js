@@ -9,8 +9,7 @@ function box(props) {
   const {image, heading, body, boxlinks} = props
   const builder = imageUrlBuilder(client)
   const simpleLink = true
-  simpleLink
-
+  console.log(simpleLink)
   return (
     <div className="bg-white p-6 border border-gray-300 rounded grow basis-0 shadow-xl space-y-2">
       <img src={builder.image(image).auto('format').width(2000).url()} className="" alt={heading} />
