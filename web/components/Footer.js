@@ -43,7 +43,9 @@ function Footer(props) {
               </svg>
               <div>
                 <span className="text-[#81A3BA]  text-xs font-bold uppercase block">Telephone</span>
-                <a>01 23 456 789</a>
+                <a className="underline" href="tel:004569162656">
+                  +45 69 162656
+                </a>
               </div>
             </div>
             <div className="flex space-x-4">
