@@ -19,5 +19,9 @@
     "lerna": "^6.1.0",
     "postcss": "^8.4.12",
     "tailwindcss": "^3.0.23"
+  },
+  "dependencies": {
+    "babel": "^6.23.0",
+    "eslint-config-standard": "^17.0.0"
   }
 }
