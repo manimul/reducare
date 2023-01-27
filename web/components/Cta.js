@@ -9,6 +9,7 @@ function cta(props) {
   if (route && route.slug && route.slug.current && style) {
     return (
       <Link
+        legacyBehavior
         href={{
           pathname: '/LandingPage',
           query: {slug: route.slug.current},
@@ -25,6 +26,7 @@ function cta(props) {
   if (route && route.slug && route.slug.current && !simpleLink) {
     return (
       <Link
+        legacyBehavior
         href={{
           pathname: '/LandingPage',
           query: {slug: route.slug.current},
@@ -43,6 +45,7 @@ function cta(props) {
   if (route && route.slug && route.slug.current && simpleLink) {
     return (
       <Link
+        legacyBehavior
         href={{
           pathname: '/LandingPage',
           query: {slug: route.slug.current},

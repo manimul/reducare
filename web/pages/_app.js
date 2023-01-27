@@ -1,6 +1,7 @@
 import React from 'react'
 import BaseApp from 'next/app'
 import client from '../client'
+
 import '../styles/shared.module.css'
 import '../styles/layout.css'
 import '../styles/globals.css'
@@ -14,6 +15,10 @@ const siteConfigQuery = `
       ...,
       "title": page->title
     },
+    secondaryNavigation[] -> {
+      ...,
+      "title": page->title
+    },
     footerNavigation[] -> {
       ...,
       "title": page->title
@@ -24,6 +29,7 @@ const siteConfigQuery = `
 class App extends BaseApp {
   static async getInitialProps({Component, ctx}) {
     let pageProps = {}
+    console.log('this is pageProps = ')
 
     if (Component.getInitialProps) {
       pageProps = await Component.getInitialProps(ctx)

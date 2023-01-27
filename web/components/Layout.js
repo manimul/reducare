@@ -7,14 +7,16 @@ import Header from './Header'
 import Footer from './Footer'
 
 function Layout(props) {
-  const {config, children} = props
+  const {config, children, language} = props
 
   if (!config) {
     console.error('Missing config')
     return <div>Missing config</div>
   }
+  console.log('props = ')
 
-  const {title, mainNavigation, footerNavigation, footerText, logo, url} = config
+  const {title, mainNavigation, secondaryNavigation, footerNavigation, footerText, logo, url} =
+    config
   const logoUrl = logo && logo.asset && logo.asset.url
 
   return (
@@ -23,7 +25,11 @@ function Layout(props) {
         <meta name="viewport" content="initial-scale=1.0, width=device-width, viewport-fit=cover" />
       </Head>
       <div className="containerOriginal">
-        <Header title={title} navItems={mainNavigation} logo={logo} />
+        <Header
+          title={title}
+          navItems={language == 'en' ? mainNavigation : secondaryNavigation}
+          logo={logo}
+        />
         <div className="-mt-24  content">{children}</div>
         <Footer navItems={footerNavigation} text={footerText} />
         {logoUrl && url && <LogoJsonLd url={url} logo={logoUrl} />}

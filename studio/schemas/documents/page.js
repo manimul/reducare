@@ -5,6 +5,18 @@ export default {
   type: 'document',
   title: 'Page',
   i18n: true,
+  initialValue: {
+    __i18n_lang: 'en'
+  },
+  i18n: {
+    base: 'en',
+    languages: ['en', 'dk'],
+    fieldNames: {
+      lang: '__i18n_lang',
+      references: '__i18n_refs',
+      baseReference: '__i18n_base'
+    }
+  },
   icon: MasterDetailIcon,
   fieldsets: [
     {

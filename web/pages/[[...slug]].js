@@ -94,9 +94,12 @@ const LandingPage = (props) => {
     content = [],
     config = {},
     slug,
+    __i18n_lang,
   } = props
 
   console.log(content)
+  console.log(props)
+  console.log(__i18n_lang)
 
   const openGraphImages = openGraphImage
     ? [
@@ -124,7 +127,7 @@ const LandingPage = (props) => {
     : []
 
   return (
-    <Layout config={config}>
+    <Layout language={__i18n_lang} config={config}>
       <NextSeo
         title={title}
         titleTemplate={`%s | ${config.title}`}
@@ -135,7 +138,7 @@ const LandingPage = (props) => {
         }}
         noindex={disallowRobots}
       />
-      {content && <RenderSections sections={content} />}
+      {content && <RenderSections language={__i18n_lang} sections={content} />}
     </Layout>
   )
 }

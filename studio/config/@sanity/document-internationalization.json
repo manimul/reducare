@@ -1,9 +1,0 @@
-{
-  "idStructure": "delimiter",
-  "referenceBehavior": "strong",
-  "languages": [
-    { "id": "dk", "title": "Danish" },
-    { "id": "en", "title": "English" },
-    { "id": "sv", "title": "Swedish" }
-  ]
-}

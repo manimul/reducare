@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import Link from 'next/link'
 import {withRouter} from 'next/router'
+import {useRouter} from 'next/router'
 import SVG from 'react-inlinesvg'
 import styles from './Header.module.css'
 import HamburgerIcon from './icons/Hamburger'
@@ -73,7 +74,7 @@ class Header extends Component {
     return (
       <div className={`z-10 w-screen mx-auto  ${styles.root}`} data-show-nav={showNav}>
         <h1 className={`text-yellow-500  ${styles.branding}`}>
-          <Link href={'/'}>
+          <Link legacyBehavior href={'/hem'}>
             <a className="ml-4" title={title}>
               {this.renderLogo(logo)}
             </a>
@@ -87,7 +88,7 @@ class Header extends Component {
                 const isActive = slugParamToPath(router.query.slug) === slug.current
                 return (
                   <li key={_id} className={styles.navItem}>
-                    <Link href={getPathFromSlug(slug.current)}>
+                    <Link legacyBehavior href={getPathFromSlug(slug.current)}>
                       <a data-is-active={isActive ? 'true' : 'false'} aria-current={isActive}>
                         {title}
                       </a>
@@ -95,7 +96,23 @@ class Header extends Component {
                   </li>
                 )
               })}
+
+            {router.locale === 'dk' ? (
+              <li className={styles.navItem}>
+                {' '}
+                <Link href="/" locale="en">
+                  🇬🇧 English{' '}
+                </Link>
+              </li>
+            ) : (
+              <li className={styles.navItem}>
+                <Link href="/hem" locale="dk">
+                  🇩🇰 Danish{' '}
+                </Link>
+              </li>
+            )}
           </ul>
+
           <button className={styles.showNavButton} onClick={this.handleMenuToggle}>
             <HamburgerIcon className={styles.hamburgerIcon} />
           </button>

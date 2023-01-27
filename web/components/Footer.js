@@ -161,7 +161,7 @@ function Footer(props) {
               const isActive = slugParamToPath(router.query.slug) === item.slug.current
               return (
                 <li key={item._id} className={styles.item}>
-                  <Link href={getPathFromSlug(item.slug.current)}>
+                  <Link legacyBehavior href={getPathFromSlug(item.slug.current)}>
                     <a data-is-active={isActive ? 'true' : 'false'} aria-current={isActive}>
                       {item.title}
                     </a>
