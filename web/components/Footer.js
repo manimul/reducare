@@ -117,7 +117,9 @@ function Footer(props) {
             className="md:w-1/2  md:h-auto "
           ></img>
 
-          <form className="bg-white md:w-1/2 h-auto  p-8 text-black">
+          <form netlify method="POST" className="bg-white md:w-1/2 h-auto  p-8 text-black">
+            <input type="hidden" name="form-name" value="contact" />
+
             <h2 className="text-2xl font-bold ">
               {router.locale === 'dk' ? 'Book dit møde nu' : 'Book your meeting now'}
             </h2>
