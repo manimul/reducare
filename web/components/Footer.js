@@ -3,12 +3,19 @@ import PropTypes from 'prop-types'
 import Link from 'next/link'
 import {withRouter} from 'next/router'
 import styles from './Footer.module.css'
+import ContactForm from './ContactForm'
 import SimpleBlockContent from './SimpleBlockContent'
 import {getPathFromSlug, slugParamToPath} from '../utils/urls'
 import contactImage from '../images/contact-image.png'
+import {useForm, ValidationError} from '@formspree/react'
 
 function Footer(props) {
   const {navItems, text, router} = props
+  const [state, handleSubmit] = useForm('xzbqdjdd')
+
+  if (state.succeeded) {
+    return <p>Thanks for your submission!</p>
+  }
   return (
     <div className={` text-white bg-slate-900 pb-12 {styles.root} pt-0`}>
       <section className={`{[contact-section]   ${styles.gradient}  }`}>
@@ -116,64 +123,7 @@ function Footer(props) {
             alt="contact form image"
             className="md:w-1/2  md:h-auto "
           ></img>
-
-          <form netlify method="POST" className="bg-white md:w-1/2 h-auto  p-8 text-black">
-            <input type="hidden" name="form-name" value="contact" />
-
-            <h2 className="text-2xl font-bold ">
-              {router.locale === 'dk' ? 'Book dit møde nu' : 'Book your meeting now'}
-            </h2>
-            <p className="">
-              {router.locale === 'dk'
-                ? 'Vi sparer typisk vores kunder for 20-50 % af telefoni- og dataomkostninger. Lad os tage en uforpligtende snak om, hvordan vi kan hjælpe dig med at spare.'
-                : ' We typically save our customers 20-50% of telephony and data costs. Let us have a non-binding talk about how we can help you save.'}
-            </p>
-            <fieldset className="flex flex-col">
-              <label htmlFor="fullname" className="font-light mt-8 ">
-                {router.locale === 'dk' ? 'Fulde navn' : 'Full Name'}
-                <span className="text-red-500 dark:text-gray-50">*</span>
-              </label>
-              <input
-                type="text"
-                name="fullname"
-                className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light "
-              />
-
-              <label htmlFor="email" className=" font-light mt-4 ">
-                E-mail<span className="text-red-500">*</span>
-              </label>
-              <input
-                type="email"
-                name="email"
-                className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light "
-              />
-
-              <label htmlFor="company" className="font-light mt-4 ">
-                {router.locale === 'dk' ? 'Selskab' : 'Company'}
-                <span className="text-red-500">*</span>
-              </label>
-              <input
-                type="text"
-                name="company"
-                className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light "
-              />
-
-              <label htmlFor="message" className=" font-light mt-4 ">
-                {router.locale === 'dk' ? 'Besked' : 'Message'}
-                <span className="text-red-500">*</span>
-              </label>
-              <textarea
-                name="message"
-                className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500  "
-              ></textarea>
-              <button
-                type="submit"
-                className="mt-8   bg-none border-2 bg-yellow-500  border-yellow-500  py-5 rounded-lg inline-block tracking-wide  font-semibold "
-              >
-                {router.locale === 'dk' ? 'Send Besked' : 'Send Message'}
-              </button>
-            </fieldset>
-          </form>
+          <ContactForm locale={router.locale} />
         </div>
       </section>
 
