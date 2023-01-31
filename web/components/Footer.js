@@ -15,14 +15,22 @@ function Footer(props) {
         <div className="max-w-5xl  mx-auto flex  flex-col pt-32 pb-12 px-12 md:flex-row md:py-32 text-white md:space-x-16 ">
           <div className="md:w-1/2 space-y-4">
             {' '}
-            <h2 className="text-sm uppercase text-[#81A3BA]">Contact Us</h2>
+            <h2 className="text-sm uppercase text-[#81A3BA]">
+              {router.locale === 'dk' ? 'Kontakt Os' : 'Contact Us'}
+            </h2>
             <h3 className="text-4xl text-white font-bold">
-              Save at least 10% on our work.{' '}
-              <span className="text-yellow-500">No cure - No pay</span>
+              {router.locale === 'dk'
+                ? 'Spar mindst 10% på vores arbejde.'
+                : 'Save at least 10% on our work.'}
+
+              <span className="text-yellow-500">
+                {router.locale === 'dk' ? ' Ingen kur - ingen løn.' : ' No cure - No pay.'}
+              </span>
             </h3>
             <p className="">
-              Of course, you get this in writing: It does not cost you a penny if we do not save you
-              at least 10% compared to your current expense.
+              {router.locale === 'dk'
+                ? 'Det får du selvfølgelig på skrift: Det koster dig ikke en krone, hvis vi ikke sparer dig mindst 10 % i forhold til din nuværende udgift.'
+                : 'Of course, you get this in writing: It does not cost you a penny if we do not save you at least 10% compared to your current expense.'}
             </p>
           </div>
           <div className="[contact details section] mt-12 space-y-4 ">
@@ -42,7 +50,9 @@ function Footer(props) {
                 />
               </svg>
               <div>
-                <span className="text-[#81A3BA]  text-xs font-bold uppercase block">Telephone</span>
+                <span className="text-[#81A3BA]  text-xs font-bold uppercase block">
+                  {router.locale === 'dk' ? 'Telefon' : 'Telephone'}
+                </span>
                 <a className="underline" href="tel:004569162656">
                   +45 69 162656
                 </a>
@@ -64,7 +74,9 @@ function Footer(props) {
                 />
               </svg>{' '}
               <div>
-                <span className="text-[#81A3BA]  text-xs font-bold uppercase block">Email</span>
+                <span className="text-[#81A3BA]  text-xs font-bold uppercase block">
+                  {router.locale === 'dk' ? 'E-mail' : 'Email'}
+                </span>
                 <a className="underline" href="mailto:hello@reducare.dk">
                   hello@reducare.dk
                 </a>
@@ -91,7 +103,9 @@ function Footer(props) {
                 />
               </svg>
               <div>
-                <span className="text-[#81A3BA] text-xs font-bold uppercase block">Address</span>
+                <span className="text-[#81A3BA] text-xs font-bold uppercase block">
+                  {router.locale === 'dk' ? 'Adresse' : 'Address'}
+                </span>
                 <a>Kattegatvej 4, 2150 Copenhagen, Denmark</a>
               </div>
             </div>
@@ -106,14 +120,18 @@ function Footer(props) {
           ></img>
 
           <form className="bg-white md:w-1/2 h-auto  p-8 text-black">
-            <h2 className="text-2xl font-bold ">Book your meeting now</h2>
+            <h2 className="text-2xl font-bold ">
+              {router.locale === 'dk' ? 'Book dit møde nu' : 'Book your meeting now'}
+            </h2>
             <p className="">
-              We typically save our customers 20-50% of telephony and data costs. Let&lsquo;s have a
-              non-binding talk about how we can help you save
+              {router.locale === 'dk'
+                ? 'Vi sparer typisk vores kunder for 20-50 % af telefoni- og dataomkostninger. Lad os tage en uforpligtende snak om, hvordan vi kan hjælpe dig med at spare.'
+                : ' We typically save our customers 20-50% of telephony and data costs. Let us have a non-binding talk about how we can help you save.'}
             </p>
             <fieldset className="flex flex-col">
               <label htmlFor="fullname" className="font-light mt-8 ">
-                Full name<span className="text-red-500 dark:text-gray-50">*</span>
+                {router.locale === 'dk' ? 'Fulde navn' : 'Full Name'}
+                <span className="text-red-500 dark:text-gray-50">*</span>
               </label>
               <input
                 type="text"
@@ -131,7 +149,8 @@ function Footer(props) {
               />
 
               <label htmlFor="company" className="font-light mt-4 ">
-                Company<span className="text-red-500">*</span>
+                {router.locale === 'dk' ? 'Selskab' : 'Company'}
+                <span className="text-red-500">*</span>
               </label>
               <input
                 type="text"
@@ -140,14 +159,15 @@ function Footer(props) {
               />
 
               <label htmlFor="message" className=" font-light mt-4 ">
-                Message<span className="text-red-500">*</span>
+                {router.locale === 'dk' ? 'Besked' : 'Message'}
+                <span className="text-red-500">*</span>
               </label>
               <textarea
                 name="message"
                 className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500  "
               ></textarea>
               <button className="mt-8   bg-none border-2 bg-yellow-500  border-yellow-500  py-5 rounded-lg inline-block tracking-wide  font-semibold ">
-                Send message
+                {router.locale === 'dk' ? 'Send Besked' : 'Send Message'}
               </button>
             </fieldset>
           </form>

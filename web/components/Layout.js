@@ -31,7 +31,10 @@ function Layout(props) {
           logo={logo}
         />
         <div className="-mt-24  content">{children}</div>
-        <Footer navItems={footerNavigation} text={footerText} />
+        <Footer
+          navItems={language == 'en' ? mainNavigation : secondaryNavigation}
+          text={footerText}
+        />
         {logoUrl && url && <LogoJsonLd url={url} logo={logoUrl} />}
       </div>
     </>
