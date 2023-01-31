@@ -166,7 +166,10 @@ function Footer(props) {
                 name="message"
                 className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500  "
               ></textarea>
-              <button className="mt-8   bg-none border-2 bg-yellow-500  border-yellow-500  py-5 rounded-lg inline-block tracking-wide  font-semibold ">
+              <button
+                type="submit"
+                className="mt-8   bg-none border-2 bg-yellow-500  border-yellow-500  py-5 rounded-lg inline-block tracking-wide  font-semibold "
+              >
                 {router.locale === 'dk' ? 'Send Besked' : 'Send Message'}
               </button>
             </fieldset>
