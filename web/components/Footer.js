@@ -23,9 +23,7 @@ function Footer(props) {
                 ? 'Spar mindst 10% på vores arbejde.'
                 : 'Save at least 10% on our work.'}
 
-              <span className="text-yellow-500">
-                {router.locale === 'dk' ? ' Ingen kur - ingen løn.' : ' No cure - No pay.'}
-              </span>
+              <span className="text-yellow-500"> No cure - No pay. </span>
             </h3>
             <p className="">
               {router.locale === 'dk'
